@@ -21,5 +21,6 @@ public class BasicCalculator {
                 + multiplication + ", and " + division);
 
         sc.close();
+        //done
     }
 }
