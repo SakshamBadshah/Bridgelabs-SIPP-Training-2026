@@ -14,4 +14,4 @@ public class Squareside {
 
         sc.close();
     }
-}
+} 
