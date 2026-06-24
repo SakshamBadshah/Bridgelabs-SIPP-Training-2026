@@ -1,0 +1,53 @@
+class InsufficientBalanceException
+extends Exception {
+
+    InsufficientBalanceException(
+    String msg) {
+
+        super(msg);
+    }
+}
+
+public class BankTransaction {
+
+    double balance = 5000;
+
+    void withdraw(double amount)
+    throws InsufficientBalanceException {
+
+        if(amount < 0)
+            throw new IllegalArgumentException();
+
+        if(amount > balance)
+            throw new InsufficientBalanceException(
+            "Insufficient balance!");
+
+        balance -= amount;
+
+        System.out.println(
+        "Withdrawal successful, new balance: "
+        + balance);
+    }
+
+    public static void main(String[] args) {
+
+        BankTransaction b =
+        new BankTransaction();
+
+        try {
+
+            b.withdraw(6000);
+
+        } catch(
+        InsufficientBalanceException e) {
+
+            System.out.println(e.getMessage());
+
+        } catch(
+        IllegalArgumentException e) {
+
+            System.out.println(
+            "Invalid amount!");
+        }
+    }
+}

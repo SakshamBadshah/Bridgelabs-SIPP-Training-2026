@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class WordLength {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String text = sc.nextLine();
+
+        String[] words = text.split(" ");
+
+        System.out.println("Word\tLength");
+
+        for (String word : words) {
+            System.out.println(word + "\t" + word.length());
+        }
+    }
+}
