@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public class NaturalSum {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
 
-        int n = sc.nextInt();
-
-        if (n > 0) {
-            int sum = n * (n + 1) / 2;
-            System.out.println("Sum = " + sum);
-        } else {
-            System.out.println("Not a natural number");
+            if (n > 0) {
+                int sum = n * (n + 1) / 2;
+                System.out.println("Sum = " + sum);
+            } else {
+                System.out.println("Not a natural number");
+            }
         }
     }
 }

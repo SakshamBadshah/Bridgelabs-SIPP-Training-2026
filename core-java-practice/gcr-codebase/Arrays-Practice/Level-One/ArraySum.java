@@ -7,7 +7,7 @@ public class ArraySum {
         double[] arr = new double[10];
         double sum = 0;
         int index = 0;
-
+      
         while (true) {
             double num = sc.nextDouble();
 

@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class SumBreak {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            double sum = 0;
 
-        double sum = 0;
+            while (true) {
+                double num = sc.nextDouble();
 
-        while (true) {
-            double num = sc.nextDouble();
+                if (num <= 0)
+                    break;
 
-            if (num <= 0)
-                break;
+                sum += num;
+            }
 
-            sum += num;
+            System.out.println("Sum = " + sum);
         }
-
-        System.out.println("Sum = " + sum);
     }
 }
