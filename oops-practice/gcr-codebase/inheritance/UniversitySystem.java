@@ -5,6 +5,7 @@ class Person {
         this.name = name;
     }
 
+    @SuppressWarnings("override")
     public String toString() {
         return "Name: " + name;
     }
@@ -20,6 +21,7 @@ class Student extends Person {
         this.gpa = gpa;
     }
 
+    @SuppressWarnings("override")
     public String toString() {
         return super.toString() +
                 ", ID: " + studentId +
@@ -37,6 +39,7 @@ class GradStudent extends Student {
         this.thesis = thesis;
     }
 
+    @SuppressWarnings("override")
     public String toString() {
         return super.toString() +
                 ", Thesis: " + thesis;
